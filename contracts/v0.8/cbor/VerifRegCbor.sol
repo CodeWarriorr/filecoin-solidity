@@ -104,7 +104,7 @@ library VerifRegCBOR {
 
         for (uint i = 0; i < len; i++) {
             (ilen, byteIdx) = rawResp.readFixedArray(byteIdx);
-            if (!(len == 8)) {
+            if (!(ilen == 8)) {
                 revert Errors.InvalidArrayLength(8, len);
             }
 
