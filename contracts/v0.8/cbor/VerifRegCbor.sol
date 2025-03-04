@@ -105,7 +105,7 @@ library VerifRegCBOR {
         for (uint i = 0; i < len; i++) {
             (ilen, byteIdx) = rawResp.readFixedArray(byteIdx);
             if (!(ilen == 8)) {
-                revert Errors.InvalidArrayLength(8, len);
+                revert Errors.InvalidArrayLength(8, ilen);
             }
 
             (ret.claims[i].provider, byteIdx) = rawResp.readFilActorId(byteIdx);
